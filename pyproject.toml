@@ -1,0 +1,33 @@
+[project]
+name = "whisper_streaming_web"
+version = "0.1.0"
+description = ""
+license = "MIT"
+readme = "README.md"
+dependencies = [
+    "ctranslate2 < 4.5",
+    "librosa",
+    "soundfile",
+    "fastapi",
+    "ffmpeg-python",
+    "faster-whisper",
+    "torch",
+    "uvicorn[standard]",
+    "diart",
+]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+author = "Quentin Fuxa"
+repository = "https://github.com/QuentinFuxa/whisper_streaming_web"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[project.scripts]
+whisper-streaming-web = 'whisper_streaming_web.serve:main'

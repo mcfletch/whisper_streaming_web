@@ -37,6 +37,15 @@ This project is based on [Whisper Streaming](https://github.com/ufal/whisper_str
 
 1. **Dependencies**:
 
+- Install system packages:
+
+    ```bash
+    # this will ask for license agreement
+    apt-get install nvidia-cudnn
+    apt-get install -y python3.11 python3-pip
+    python3 -m pip install uv
+    ```
+
 - Install required dependences :
 
     ```bash
@@ -79,6 +88,8 @@ This project is based on [Whisper Streaming](https://github.com/ufal/whisper_str
 
     ```bash
     python whisper_fastapi_online_server.py --host 0.0.0.0 --port 8000
+
+    uv run whisper-streaming-web
     ```
 
     **Parameters**
